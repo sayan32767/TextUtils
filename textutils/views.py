@@ -45,7 +45,12 @@ def analyse(request):
     
     if extraspaceremove == 'on':
         for index, char in enumerate(djtext):
-            if not djtext[index] == ' ' and djtext[index + 1] == ' ':
+            # It is for if a extraspace is in the last of the string
+            if char == djtext[-1]:
+                if not(djtext[index] == " "):
+                    analysed += char
+
+            elif not(djtext[index] == " " and djtext[index+1]==" "):                        
                 analysed += char
 
         djtext = analysed
