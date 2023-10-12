@@ -70,3 +70,5 @@ def contact(request):
 
 def about(request):
     pass
+
+# I have added this new line to the project on 12-10-2023
